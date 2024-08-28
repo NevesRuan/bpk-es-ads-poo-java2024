@@ -9,7 +9,7 @@ public class TesteLivro {
         System.out.println(livro1);
         livro1.abrirLivro();
         livro1.lerPagina();
-        System.out.println("Pagina atual: " + livro1.getPaginaAtual());;
+        System.out.println("Pagina atual: " + livro1.getPaginaAtual());
         System.out.println(livro1.livroAberto());
     }
 }

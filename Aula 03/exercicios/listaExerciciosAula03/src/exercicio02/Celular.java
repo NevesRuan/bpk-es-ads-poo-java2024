@@ -1,20 +1,33 @@
 package exercicio02;
 
-/**
- * 2 - Defina uma classe Celular com atributos como marca, modelo,
- * e capacidadeBateria.
- * Adicione métodos para ligar e desligar o celular.
- */
 public class Celular {
     private String marca;
     private String modelo;
-    private String capacidadeBateria;
+    private Integer capacidadeBateria;
     private Boolean ligado = false;
 
-    public Celular(String marca, String modelo, String capacidadeBateria) {
+    public Celular(String marca, String modelo, Integer capacidadeBateria) {
         this.marca = marca;
         this.modelo = modelo;
         this.capacidadeBateria = capacidadeBateria;
+    }
+
+    public void ligar() {
+        if (!ligado) {
+            ligado = true;
+            System.out.println("Celular ligado.");
+        } else {
+            System.out.println("Celular já está ligado.");
+        }
+    }
+
+    public void desligar() {
+        if (ligado) {
+            ligado = false;
+            System.out.println("Celular desligado.");
+        } else {
+            System.out.println("Celular já está desligado.");
+        }
     }
 
     public String getMarca() {
@@ -25,22 +38,12 @@ public class Celular {
         return modelo;
     }
 
-    public String getCapacidadeBateria() {
+    public Integer getCapacidadeBateria() {
         return capacidadeBateria;
     }
 
-    public Boolean getLigado() {
+    public Boolean isLigado() {
         return ligado;
-    }
-
-    public void ligar(){
-        System.out.println("Ligando celular...");
-        this.ligado = true;
-    }
-
-    public void desligar(){
-        System.out.println("Desligando celular");
-        this.ligado = false;
     }
 
     @Override
@@ -48,7 +51,7 @@ public class Celular {
         return "Celular{" +
                 "marca='" + marca + '\'' +
                 ", modelo='" + modelo + '\'' +
-                ", capacidadeBateria='" + capacidadeBateria + '\'' +
+                ", capacidadeBateria=" + capacidadeBateria +
                 ", ligado=" + ligado +
                 '}';
     }

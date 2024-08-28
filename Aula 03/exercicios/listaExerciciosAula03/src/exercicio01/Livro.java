@@ -1,12 +1,5 @@
 package exercicio01;
 
-import java.util.Objects;
-
-/**
- * 1 - Crie uma classe chamada Livro com atributos como titulo,
- * autor, e numeroDePaginas.
- * Adicione métodos para abrir o livro e ler uma página.
- */
 public class Livro {
     public String titulo;
     public String autor;
@@ -26,7 +19,6 @@ public class Livro {
     }
 
     public void lerPagina(){
-
         if(paginaAtual.equals(numeroDePaginas)){
             concluido = true;
         }else{

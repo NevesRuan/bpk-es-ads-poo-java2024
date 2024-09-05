@@ -12,24 +12,6 @@ public class Computador {
         this.armazenamento = armazenamento;
     }
 
-    public void ligar() {
-        if (!ligado) {
-            ligado = true;
-            System.out.println("Computador ligado.");
-        } else {
-            System.out.println("Computador já está ligado.");
-        }
-    }
-
-    public void desligar() {
-        if (ligado) {
-            ligado = false;
-            System.out.println("Computador desligado.");
-        } else {
-            System.out.println("Computador já está desligado.");
-        }
-    }
-
     public String getProcessador() {
         return processador;
     }
@@ -42,17 +24,19 @@ public class Computador {
         return armazenamento;
     }
 
-    public Boolean isLigado() {
+    public Boolean getLigado() {
         return ligado;
     }
 
-    @Override
-    public String toString() {
-        return "Computador{" +
-                "processador='" + processador + '\'' +
-                ", memoriaRAM=" + memoriaRAM +
-                ", armazenamento=" + armazenamento +
-                ", ligado=" + ligado +
-                '}';
+    public void ligar() {
+        if (!ligado) {
+            ligado = true;
+        }
+    }
+
+    public void desligar() {
+        if (ligado) {
+            ligado = false;
+        }
     }
 }

@@ -11,14 +11,6 @@ public class Cachorro {
         this.idade = idade;
     }
 
-    public void latir() {
-        System.out.println("Au au!");
-    }
-
-    public void correr() {
-        System.out.println("Correndo...");
-    }
-
     public String getNome() {
         return nome;
     }
@@ -31,12 +23,11 @@ public class Cachorro {
         return idade;
     }
 
-    @Override
-    public String toString() {
-        return "Cachorro{" +
-                "nome='" + nome + '\'' +
-                ", raca='" + raca + '\'' +
-                ", idade=" + idade +
-                '}';
+    public void latir() {
+        System.out.println("Au au!");
+    }
+
+    public void correr() {
+        System.out.println("Correndo...");
     }
 }

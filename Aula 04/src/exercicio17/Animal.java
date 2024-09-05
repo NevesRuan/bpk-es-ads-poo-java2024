@@ -11,14 +11,6 @@ public class Animal {
         this.peso = peso;
     }
 
-    public void alimentar() {
-        System.out.println("Animal alimentado.");
-    }
-
-    public void dormir() {
-        System.out.println("Animal dormindo.");
-    }
-
     public String getEspecie() {
         return especie;
     }
@@ -31,12 +23,11 @@ public class Animal {
         return peso;
     }
 
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "especie='" + especie + '\'' +
-                ", idade=" + idade +
-                ", peso=" + peso +
-                '}';
+    public void alimentar() {
+        System.out.println("Animal alimentado.");
+    }
+
+    public void dormir() {
+        System.out.println("Animal dormindo.");
     }
 }

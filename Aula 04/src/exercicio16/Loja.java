@@ -12,6 +12,22 @@ public class Loja {
         this.telefone = telefone;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public Boolean getAberta() {
+        return aberta;
+    }
+
     public void abrir() {
         if (!aberta) {
             aberta = true;
@@ -28,31 +44,5 @@ public class Loja {
         } else {
             System.out.println("A loja já está fechada.");
         }
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public Boolean isAberta() {
-        return aberta;
-    }
-
-    @Override
-    public String toString() {
-        return "Loja{" +
-                "nome='" + nome + '\'' +
-                ", endereco='" + endereco + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", aberta=" + aberta +
-                '}';
     }
 }

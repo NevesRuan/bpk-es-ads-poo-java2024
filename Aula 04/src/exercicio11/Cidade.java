@@ -11,20 +11,6 @@ public class Cidade {
         this.estado = estado;
     }
 
-    public void aumentarPopulacao(Integer quantidade) {
-        populacao += quantidade;
-        System.out.println("População aumentada. População atual: " + populacao);
-    }
-
-    public void diminuirPopulacao(Integer quantidade) {
-        if (quantidade <= populacao) {
-            populacao -= quantidade;
-            System.out.println("População diminuída. População atual: " + populacao);
-        } else {
-            System.out.println("A quantidade de diminuição é maior que a população atual.");
-        }
-    }
-
     public String getNome() {
         return nome;
     }
@@ -37,12 +23,15 @@ public class Cidade {
         return estado;
     }
 
-    @Override
-    public String toString() {
-        return "Cidade{" +
-                "nome='" + nome + '\'' +
-                ", populacao=" + populacao +
-                ", estado='" + estado + '\'' +
-                '}';
+    public void aumentarPopulacao(Integer quantidade) {
+        populacao += quantidade;
+    }
+
+    public void diminuirPopulacao(Integer quantidade) {
+        if (quantidade <= populacao) {
+            populacao -= quantidade;
+        } else {
+            System.out.println("A quantidade de diminuição é maior que a população atual.");
+        }
     }
 }

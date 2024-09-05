@@ -11,14 +11,6 @@ public class Cozinha {
         this.cor = cor;
     }
 
-    public void cozinhar() {
-        System.out.println("Cozinhando...");
-    }
-
-    public void limpar() {
-        System.out.println("Cozinha limpa.");
-    }
-
     public String getTipo() {
         return tipo;
     }
@@ -31,12 +23,11 @@ public class Cozinha {
         return cor;
     }
 
-    @Override
-    public String toString() {
-        return "Cozinha{" +
-                "tipo='" + tipo + '\'' +
-                ", quantidadePessoas=" + quantidadePessoas +
-                ", cor='" + cor + '\'' +
-                '}';
+    public void cozinhar() {
+        System.out.println("Cozinhando...");
+    }
+
+    public void limpar() {
+        System.out.println("Cozinha limpa.");
     }
 }

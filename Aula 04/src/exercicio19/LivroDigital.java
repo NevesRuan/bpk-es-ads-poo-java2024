@@ -12,24 +12,6 @@ public class LivroDigital {
         this.tamanhoArquivo = tamanhoArquivo;
     }
 
-    public void abrir() {
-        if (!aberto) {
-            aberto = true;
-            System.out.println("Livro digital aberto.");
-        } else {
-            System.out.println("O livro digital já está aberto.");
-        }
-    }
-
-    public void fechar() {
-        if (aberto) {
-            aberto = false;
-            System.out.println("Livro digital fechado.");
-        } else {
-            System.out.println("O livro digital já está fechado.");
-        }
-    }
-
     public String getTitulo() {
         return titulo;
     }
@@ -42,17 +24,21 @@ public class LivroDigital {
         return tamanhoArquivo;
     }
 
-    public Boolean isAberto() {
+    public Boolean getAberto() {
         return aberto;
     }
 
-    @Override
-    public String toString() {
-        return "LivroDigital{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", tamanhoArquivo=" + tamanhoArquivo +
-                ", aberto=" + aberto +
-                '}';
+    public void abrir() {
+        if (!aberto) {
+            aberto = true;
+            System.out.println("Livro digital aberto.");
+        }
+    }
+
+    public void fechar() {
+        if (aberto) {
+            aberto = false;
+            System.out.println("Livro digital fechado.");
+        }
     }
 }

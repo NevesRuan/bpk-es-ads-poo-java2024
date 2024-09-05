@@ -11,14 +11,6 @@ public class Veiculo {
         this.cor = cor;
     }
 
-    public void abastecer() {
-        System.out.println("Veículo abastecido.");
-    }
-
-    public void lavar() {
-        System.out.println("Veículo lavado.");
-    }
-
     public String getTipo() {
         return tipo;
     }
@@ -31,12 +23,11 @@ public class Veiculo {
         return cor;
     }
 
-    @Override
-    public String toString() {
-        return "Veiculo{" +
-                "tipo='" + tipo + '\'' +
-                ", placa='" + placa + '\'' +
-                ", cor='" + cor + '\'' +
-                '}';
+    public void abastecer() {
+        System.out.println("Veículo abastecido.");
+    }
+
+    public void lavar() {
+        System.out.println("Veículo lavado.");
     }
 }

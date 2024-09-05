@@ -1,12 +1,11 @@
 package exercicio01;
 
 public class Livro {
-    public String titulo;
-    public String autor;
-    public Integer numeroDePaginas;
+    private String titulo;
+    private String autor;
+    private Integer numeroDePaginas;
     private Boolean aberto = false;
     private Integer paginaAtual = 1;
-    private Boolean concluido = false;
 
     public Livro(String titulo, String autor, Integer numeroDePaginas) {
         this.titulo = titulo;
@@ -14,19 +13,19 @@ public class Livro {
         this.numeroDePaginas = numeroDePaginas;
     }
 
-    public void abrirLivro(){
-        this.aberto = true;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void lerPagina(){
-        if(paginaAtual.equals(numeroDePaginas)){
-            concluido = true;
-        }else{
-            paginaAtual++;
-        }
+    public String getAutor() {
+        return autor;
     }
 
-    public Boolean livroAberto() {
+    public Integer getNumeroDePaginas() {
+        return numeroDePaginas;
+    }
+
+    public Boolean getAberto() {
         return aberto;
     }
 
@@ -34,12 +33,15 @@ public class Livro {
         return paginaAtual;
     }
 
-    @Override
-    public String toString() {
-        return "Livro{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", numeroDePaginas=" + numeroDePaginas +
-                '}';
+    public void abrirLivro() {
+        this.aberto = true;
+    }
+
+    public void lerPagina() {
+        if (paginaAtual.equals(numeroDePaginas)) {
+            System.out.println("Você chegou ao final do livro!");
+        } else {
+            paginaAtual++;
+        }
     }
 }

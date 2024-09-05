@@ -11,20 +11,6 @@ public class Produto {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 
-    public void aumentarEstoque(Integer quantidade) {
-        quantidadeEstoque += quantidade;
-        System.out.println("Estoque aumentado. Quantidade atual: " + quantidadeEstoque);
-    }
-
-    public void diminuirEstoque(Integer quantidade) {
-        if (quantidade <= quantidadeEstoque) {
-            quantidadeEstoque -= quantidade;
-            System.out.println("Estoque diminuído. Quantidade atual: " + quantidadeEstoque);
-        } else {
-            System.out.println("Quantidade insuficiente em estoque.");
-        }
-    }
-
     public String getNome() {
         return nome;
     }
@@ -37,12 +23,15 @@ public class Produto {
         return quantidadeEstoque;
     }
 
-    @Override
-    public String toString() {
-        return "Produto{" +
-                "nome='" + nome + '\'' +
-                ", preco=" + preco +
-                ", quantidadeEstoque=" + quantidadeEstoque +
-                '}';
+    public void aumentarEstoque(Integer quantidade) {
+        quantidadeEstoque += quantidade;
+    }
+
+    public void diminuirEstoque(Integer quantidade) {
+        if (quantidade <= quantidadeEstoque) {
+            quantidadeEstoque -= quantidade;
+        } else {
+            System.out.println("Estoque insuficiente.");
+        }
     }
 }

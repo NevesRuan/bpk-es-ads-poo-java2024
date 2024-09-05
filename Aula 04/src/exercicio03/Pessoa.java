@@ -11,10 +11,6 @@ public class Pessoa {
         this.altura = altura;
     }
 
-    public void apresentar() {
-        System.out.println("Olá, meu nome é " + nome + ", tenho " + idade + " anos e minha altura é " + altura + " metros.");
-    }
-
     public String getNome() {
         return nome;
     }
@@ -27,12 +23,7 @@ public class Pessoa {
         return altura;
     }
 
-    @Override
-    public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", altura=" + altura +
-                '}';
+    public void apresentar() {
+        System.out.println("Olá, meu nome é " + nome + ", tenho " + idade + " anos e minha altura é " + altura + " metros.");
     }
 }

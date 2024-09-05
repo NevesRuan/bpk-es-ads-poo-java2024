@@ -2,10 +2,7 @@ package exercicio08;
 
 public class TesteProfessor {
     public static void main(String[] args) {
-        Professor professor = new Professor("Carlos", "Matemática", 3000.0);
-
-        System.out.println(professor);
-
+        Professor professor = new Professor("Dr. João", "Matemática", 5000.0);
         professor.darAula();
         professor.corrigirProvas();
     }

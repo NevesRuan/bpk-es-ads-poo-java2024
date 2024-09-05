@@ -11,14 +11,6 @@ public class Professor {
         this.salario = salario;
     }
 
-    public void darAula() {
-        System.out.println("Aula dada.");
-    }
-
-    public void corrigirProvas() {
-        System.out.println("Provas corrigidas.");
-    }
-
     public String getNome() {
         return nome;
     }
@@ -31,12 +23,11 @@ public class Professor {
         return salario;
     }
 
-    @Override
-    public String toString() {
-        return "Professor{" +
-                "nome='" + nome + '\'' +
-                ", disciplina='" + disciplina + '\'' +
-                ", salario=" + salario +
-                '}';
+    public void darAula() {
+        System.out.println("Aula dada.");
+    }
+
+    public void corrigirProvas() {
+        System.out.println("Provas corrigidas.");
     }
 }

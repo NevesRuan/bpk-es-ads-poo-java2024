@@ -11,20 +11,6 @@ public class Time {
         this.numeroDeJogadores = numeroDeJogadores;
     }
 
-    public void adicionarJogador() {
-        numeroDeJogadores++;
-        System.out.println("Jogador adicionado. Número de jogadores: " + numeroDeJogadores);
-    }
-
-    public void removerJogador() {
-        if (numeroDeJogadores > 0) {
-            numeroDeJogadores--;
-            System.out.println("Jogador removido. Número de jogadores: " + numeroDeJogadores);
-        } else {
-            System.out.println("Não há jogadores para remover.");
-        }
-    }
-
     public String getNome() {
         return nome;
     }
@@ -37,12 +23,15 @@ public class Time {
         return numeroDeJogadores;
     }
 
-    @Override
-    public String toString() {
-        return "Time{" +
-                "nome='" + nome + '\'' +
-                ", tecnico='" + tecnico + '\'' +
-                ", numeroDeJogadores=" + numeroDeJogadores +
-                '}';
+    public void adicionarJogador() {
+        numeroDeJogadores++;
+    }
+
+    public void removerJogador() {
+        if (numeroDeJogadores > 0) {
+            numeroDeJogadores--;
+        } else {
+            System.out.println("Não há jogadores para remover.");
+        }
     }
 }

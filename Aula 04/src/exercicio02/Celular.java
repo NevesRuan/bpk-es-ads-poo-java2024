@@ -12,24 +12,6 @@ public class Celular {
         this.capacidadeBateria = capacidadeBateria;
     }
 
-    public void ligar() {
-        if (!ligado) {
-            ligado = true;
-            System.out.println("Celular ligado.");
-        } else {
-            System.out.println("Celular já está ligado.");
-        }
-    }
-
-    public void desligar() {
-        if (ligado) {
-            ligado = false;
-            System.out.println("Celular desligado.");
-        } else {
-            System.out.println("Celular já está desligado.");
-        }
-    }
-
     public String getMarca() {
         return marca;
     }
@@ -42,17 +24,21 @@ public class Celular {
         return capacidadeBateria;
     }
 
-    public Boolean isLigado() {
+    public Boolean getLigado() {
         return ligado;
     }
 
-    @Override
-    public String toString() {
-        return "Celular{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", capacidadeBateria=" + capacidadeBateria +
-                ", ligado=" + ligado +
-                '}';
+    public void ligar() {
+        if (!ligado) {
+            ligado = true;
+            System.out.println("Celular ligado.");
+        }
+    }
+
+    public void desligar() {
+        if (ligado) {
+            ligado = false;
+            System.out.println("Celular desligado.");
+        }
     }
 }

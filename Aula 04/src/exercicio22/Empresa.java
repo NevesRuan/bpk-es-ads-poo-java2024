@@ -11,20 +11,6 @@ public class Empresa {
         this.numeroFuncionarios = numeroFuncionarios;
     }
 
-    public void contratarFuncionario() {
-        numeroFuncionarios++;
-        System.out.println("Funcionário contratado. Número de funcionários: " + numeroFuncionarios);
-    }
-
-    public void demitirFuncionario() {
-        if (numeroFuncionarios > 0) {
-            numeroFuncionarios--;
-            System.out.println("Funcionário demitido. Número de funcionários: " + numeroFuncionarios);
-        } else {
-            System.out.println("Não há funcionários para demitir.");
-        }
-    }
-
     public String getNome() {
         return nome;
     }
@@ -37,12 +23,15 @@ public class Empresa {
         return numeroFuncionarios;
     }
 
-    @Override
-    public String toString() {
-        return "Empresa{" +
-                "nome='" + nome + '\'' +
-                ", CNPJ='" + CNPJ + '\'' +
-                ", numeroFuncionarios=" + numeroFuncionarios +
-                '}';
+    public void contratarFuncionario() {
+        numeroFuncionarios++;
+    }
+
+    public void demitirFuncionario() {
+        if (numeroFuncionarios > 0) {
+            numeroFuncionarios--;
+        } else {
+            System.out.println("Não há funcionários para demitir.");
+        }
     }
 }

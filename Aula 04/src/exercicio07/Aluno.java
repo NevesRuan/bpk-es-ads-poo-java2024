@@ -11,14 +11,6 @@ public class Aluno {
         this.curso = curso;
     }
 
-    public double calcularMedia(double[] notas) {
-        double soma = 0;
-        for (double nota : notas) {
-            soma += nota;
-        }
-        return soma / notas.length;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -31,12 +23,11 @@ public class Aluno {
         return curso;
     }
 
-    @Override
-    public String toString() {
-        return "Aluno{" +
-                "nome='" + nome + '\'' +
-                ", matricula='" + matricula + '\'' +
-                ", curso='" + curso + '\'' +
-                '}';
+    public double calcularMedia(double[] notas) {
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma / notas.length;
     }
 }

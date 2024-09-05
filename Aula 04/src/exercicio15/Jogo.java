@@ -11,14 +11,6 @@ public class Jogo {
         this.preco = preco;
     }
 
-    public void iniciar() {
-        System.out.println("Jogo iniciado.");
-    }
-
-    public void pausar() {
-        System.out.println("Jogo pausado.");
-    }
-
     public String getNome() {
         return nome;
     }
@@ -31,12 +23,11 @@ public class Jogo {
         return preco;
     }
 
-    @Override
-    public String toString() {
-        return "Jogo{" +
-                "nome='" + nome + '\'' +
-                ", genero='" + genero + '\'' +
-                ", preco=" + preco +
-                '}';
+    public void iniciar() {
+        System.out.println("Jogo iniciado.");
+    }
+
+    public void pausar() {
+        System.out.println("Jogo pausado.");
     }
 }

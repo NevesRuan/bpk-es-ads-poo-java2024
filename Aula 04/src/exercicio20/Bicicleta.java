@@ -11,14 +11,6 @@ public class Bicicleta {
         this.tamanhoRoda = tamanhoRoda;
     }
 
-    public void pedalar() {
-        System.out.println("Pedalando...");
-    }
-
-    public void frear() {
-        System.out.println("Freando...");
-    }
-
     public String getMarca() {
         return marca;
     }
@@ -31,12 +23,11 @@ public class Bicicleta {
         return tamanhoRoda;
     }
 
-    @Override
-    public String toString() {
-        return "Bicicleta{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", tamanhoRoda=" + tamanhoRoda +
-                '}';
+    public void pedalar() {
+        System.out.println("Pedalando...");
+    }
+
+    public void frear() {
+        System.out.println("Freando...");
     }
 }

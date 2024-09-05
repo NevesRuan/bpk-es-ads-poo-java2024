@@ -11,14 +11,6 @@ public class Filme {
         this.duracao = duracao;
     }
 
-    public void iniciar() {
-        System.out.println("Filme iniciado.");
-    }
-
-    public void parar() {
-        System.out.println("Filme parado.");
-    }
-
     public String getTitulo() {
         return titulo;
     }
@@ -31,12 +23,11 @@ public class Filme {
         return duracao;
     }
 
-    @Override
-    public String toString() {
-        return "Filme{" +
-                "titulo='" + titulo + '\'' +
-                ", diretor='" + diretor + '\'' +
-                ", duracao=" + duracao +
-                '}';
+    public void iniciar() {
+        System.out.println("Filme iniciado.");
+    }
+
+    public void parar() {
+        System.out.println("Filme parado.");
     }
 }
